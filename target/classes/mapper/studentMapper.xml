@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="hbeu.lyy.pojo.Student">
+    <select id="selectStudentByUsernameAndSex"
+            resultType="hbeu.lyy.pojo.Student" parameterType="hbeu.lyy.pojo.Student">
+        <!-- 这里和普通的sql 查询语句差不多，对于只有一个参数，后面的 #{id}表示占位符，里面不一定要写id,
+                写啥都可以，但是不要空着，如果有多个参数则必须写pojo类里面的属性 -->
+        select * from user where username=#{username} and sex=#{sex}
+    </select>
+
+    <select id="findById"
+            resultType="hbeu.lyy.pojo.Student" parameterType="hbeu.lyy.pojo.Student">
+        <!-- 这里和普通的sql 查询语句差不多，对于只有一个参数，后面的 #{id}表示占位符，里面不一定要写id,
+                写啥都可以，但是不要空着，如果有多个参数则必须写pojo类里面的属性 -->
+        select * from student where username=#{username} and sex=#{sex}
+    </select>
+</mapper>
