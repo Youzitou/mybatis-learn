@@ -1,5 +1,6 @@
 package hbeu.lyy.test;
 
+import org.apache.ibatis.io.Resources;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
@@ -9,6 +10,7 @@ import org.mybatis.generator.internal.DefaultShellCallback;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,13 +28,13 @@ import java.util.List;
  */
 public class GeneratorTest {
     public static void main(String[] args) throws IOException, XMLParserException, InvalidConfigurationException, SQLException, InterruptedException {
-        File file = new File("D:\\IDEA_project\\mybatis-learn\\src\\main\\resources\\generator.xml");
-        //   File file = new File("D:\IDEA_project\mybatis-learn\src\main\resources\generator.xml");
+        //File file = new File("D:\\IDEA_project\\mybatis-learn\\src\\main\\resources\\generator.xml");
+        InputStream is = Resources.getResourceAsStream("generator.xml");
         List<String> warnings = new ArrayList<String>();
 
         ConfigurationParser cp = new ConfigurationParser(warnings);
-
-        Configuration config = cp.parseConfiguration(file);
+        //Configuration config = cp.parseConfiguration(file);
+        Configuration config = cp.parseConfiguration(is);
 
         DefaultShellCallback callback = new DefaultShellCallback(true);
 
