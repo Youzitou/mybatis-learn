@@ -1,0 +1,4 @@
+﻿
+
+ 1解决pom.xml不能引入ojdbc问题 https://blog.csdn.net/erlian1992/article/details/74279106
+mvn install:install-file -Dfile=C:\ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.1.0 -Dpackaging=jar
