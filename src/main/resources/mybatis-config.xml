@@ -28,6 +28,7 @@
         <!--<mapper resource="mapper/userMapper.xml"/>-->
         <!--<mapper resource="mapper/studentMapper.xml"/>-->
         <mapper resource="mapper/personMapper.xml"/>
+        <mapper resource="mapper/student2Mapper.xml"/>
     </mappers>
 
 </configuration>
