@@ -10,5 +10,15 @@
         select * from student2 where id=#{id}
     </select>
 
+    <select id="queryAllStudent2"
+            resultType="hbeu.lyy.pojo.Student2" >
+
+        select * from student2
+    </select>
+
+    <insert id="addStudent2" parameterType="hbeu.lyy.pojo.Student2">
+      insert into student2(id,stuname,address) values (#{id},#{stuname},#{address})
+    </insert>
+
 
 </mapper>

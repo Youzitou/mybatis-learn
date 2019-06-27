@@ -17,7 +17,7 @@
                 <!--<property name="password" value="root"/>-->
                 <!--连接oracle数据库-->
                 <property name="driver" value="oracle.jdbc.OracleDriver"/>
-                <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl"/>
+                <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:ORCL"/>
                 <property name="username" value="scott"/>
                 <property name="password" value="tiger"/>
             </dataSource>
@@ -28,6 +28,7 @@
         <!--<mapper resource="mapper/userMapper.xml"/>-->
         <!--<mapper resource="mapper/studentMapper.xml"/>-->
         <mapper resource="mapper/personMapper.xml"/>
+        <mapper resource="mapper/student2Mapper.xml"/>
     </mappers>
 
 </configuration>

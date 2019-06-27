@@ -7,6 +7,8 @@ package hbeu.lyy.interfaces;
 
 import hbeu.lyy.pojo.Student2;
 
+import java.util.List;
+
 /**
  * 操作mybatis的接口
  */
@@ -20,4 +22,8 @@ public interface Student2Mapper {
      * 1 namespace的值就是接口的全类名
      */
     Student2 queryStudent2ById(int id);
+
+    List<Student2> queryAllStudent2();
+
+    void addStudent2(Student2 student2);
 }
